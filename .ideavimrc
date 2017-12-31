@@ -1,0 +1,41 @@
+let mapleader = " "
+
+set surround
+
+set number
+set relativenumber
+
+nnoremap <leader>so :source ~/.ideavimrc<cr>
+nnoremap <leader>a :actionlist<cr>
+
+noremap <leader>cr :action ReformatCode<CR>
+
+inoremap <Left>  <nop>
+inoremap <Right> <nop>
+inoremap <Up>    <nop>
+inoremap <Down>  <nop>
+
+noremap <Left>   <esc>:echo "Don't be an idiot"<cr>
+noremap <Right>  <esc>:echo "Don't be an idiot"<cr>
+noremap <Up>     <esc>:echo "Don't be an idiot"<cr>
+noremap <Down>   <esc>:echo "Don't be an idiot"<cr>
+
+nnoremap <leader>wj :action VimWindowDown<cr>
+nnoremap <leader>wh :action VimWindowLeft<cr>
+nnoremap <leader>wk :action VimWindowUp<cr>
+nnoremap <leader>wl :action VimWindowRight<cr>
+
+nnoremap <leader>tl :action NextTab<cr>
+nnoremap <leader>th :action PreviousTab<cr>
+
+nnoremap <leader>z :action ZoomCurrentWindow<cr>
+
+nnoremap <leader>ws :sp<cr>
+nnoremap <leader>wv :vsp<cr>
+
+nnoremap <leader>fs :w<cr>
+nnoremap <leader>q :action VimWindowClose<cr>
+
+nnoremap <C-j> :action MoveLineDown<cr>
+nnoremap <C-k> :action MoveLineUp<cr>
+
