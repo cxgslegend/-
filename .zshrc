@@ -54,6 +54,11 @@ plugins=(git)
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/usr/local/texlive/2015basic/bin/x86_64-darwin"
+export ANDROID_HOME='/Users/craiglovell/Library/Android/sdk'
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export GOPATH=$HOME/Dropbox/GoWorkspace
+export PATH=$PATH:$GOPATH/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -99,5 +104,10 @@ zle -N zle-keymap-select
 # alias vim="nvim"
 # alias serve="php -S localhost:3000 & && open http://localhost:3000 && fg"
 
+# alias redhawk="ssh -X -C lovellcl@redhawk.hpc.miamioh.edu"
+alias redhawk="ssh -X -C lovellcl@redhawk.hpc.miamioh.edu"
+alias lnx01="ssh lovellcl@ceclnx01.csi.miamioh.edu"
+alias os1="ssh lovellcl@os1.csi.miamioh.edu"
+alias myserver="ssh root@162.243.223.98"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
