@@ -1,14 +1,38 @@
-let mapleader = " "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"              ______           _          __                    ____           "
+"             / ____/________ _(_)___ _   / /   ____ _   _____  / / /           "
+"            / /   / ___/ __ `/ / __ `/  / /   / __ \ | / / _ \/ / /            "
+"           / /___/ /  / /_/ / / /_/ /  / /___/ /_/ / |/ /  __/ / /             "
+"           \____/_/   \__,_/_/\__, /  /_____/\____/|___/\___/_/_/              "
+"                             /____/                                            "
+"                                                                               "
+" Sections:                           --------------------------------------    "
+"                                     | These following keys are safe to   |    "
+"                                     | modify becuase they are pointless. |    "
+"                                     |                                    |    "
+"                                     | <space>, <cr>, <bs>, and -         |    "
+"                                     --------------------------------------    "
+"                                                                               "
+"                                                                               "
+"                                                                               "
+"                                                                               "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+let mapleader = " "
 set surround
 
 set number
 set relativenumber
+set incsearch        " Search while you type 
+set hlsearch         " Highlight all matches 
+set ignorecase       " Ignore case while searching 
+set smartcase        " ... dont ignore case when you use uppercase letters in the search pattern
 
 nnoremap <leader>so :source ~/.ideavimrc<cr>
 nnoremap <leader>a :actionlist<cr>
-
 noremap <leader>cr :action ReformatCode<CR>
+noremap <cr> :noh<cr>
+nnoremap <leader><leader> :e #<cr>
 
 inoremap <Left>  <nop>
 inoremap <Right> <nop>
@@ -34,8 +58,20 @@ nnoremap <leader>ws :sp<cr>
 nnoremap <leader>wv :vsp<cr>
 
 nnoremap <leader>fs :w<cr>
-nnoremap <leader>q :action VimWindowClose<cr>
+nnoremap <leader>q :action CloseContent<cr>
 
 nnoremap <C-j> :action MoveLineDown<cr>
 nnoremap <C-k> :action MoveLineUp<cr>
 
+nnoremap U <esc>8kzz<cr>
+nnoremap D <esc>8jzz<cr>
+
+nnoremap <leader>ff :action GotoFile<cr>
+nnoremap <leader>gd :action GotoDeclaration<cr>
+nnoremap <leader>gb :action Back<cr>
+nnoremap <leader>ll :set norelativenumber<cr>
+nnoremap <leader>p :action FindInPath<cr>
+nnoremap <leader>ml :action FileStructurePopup<cr>
+
+vnoremap <leader>r<leader> :actionRefactorings.QuickListPopupAction<cr>
+nnoremap <leader>rr        :action RenameElement<cr>
